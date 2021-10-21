@@ -10,7 +10,7 @@ def home():
 
 
 
-@views.route('anime/<name>', methods=['GET'])
+@views.route('anime/<name>')
 def episode(name):
     print(name)
     name = str(name)
@@ -21,11 +21,6 @@ def episode(name):
     img = (data[num]['img'])
     title = (data[num]['title'])
     
-    #x = data.index(filter(lambda n:n.get('title') == name, data))
-    #print(x)
-   
-
-    #[i for i, d in enumerate(data) if name in print(d.values())]
 
 
     
@@ -34,14 +29,14 @@ def episode(name):
 
 
 
-@views.route('anime/<name>/episode<int:i>', methods=['GET'])
+@views.route('anime/<name>/episode<int:i>', )
 def player(name, i):
     print(name)
     print(i)
     name = str(name)
     num = next((index for (index, d) in enumerate(data) if d["title"] == name), None)
     num = int(num)
-    eptotal = (data[num]['eptotal'])
+    episodetotal = (data[num]['eptotal'])
     title = (data[num]['title'])
     eptotal= int(eptotal)
     eptotal = eptotal+1
@@ -49,4 +44,4 @@ def player(name, i):
     i = str(i)
     link = data[num][i]
     print(link)
-    return render_template("watch.html", data = data[num], eptotal = eptotal,title = title, link = link)
+    return render_template("watch.html", data = data[num], episodetotal = episodetotal,title = title, link = link)
