@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Watch anime</title>
+ 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  
+   
+  </head>
+  <body>
+    {% for d in data %}
+       
+            <a href="/anime/{{ d.title}}" class="image is-128x128 is-pulled-left my-6 p-3"><img src= {{ d.img}}> <h1 class="subtitle is-family-monospace">{{ d.title}}</h1> </a>
+         
+       
+       
+        
+    {% endfor %}
+
+
+ 
+        
+          
+          
+          
+      
+
+    
+           
+       <!--
+             <div class="content">
+
+        <ul class="is-pulled-left">
+          <a href="#"><img src="https://img.zoronetwork.ru/_r/300x400/100/dc/a5/dca5567829fc96df655f2a426cc17191/dca5567829fc96df655f2a426cc17191.jpg"  /></image></br></a>
+          <a href="#"><img is-pulled-left src="https://img.zoronetwork.ru/_r/300x400/100/dc/a5/dca5567829fc96df655f2a426cc17191/dca5567829fc96df655f2a426cc17191.jpg"  /></image></br></a>
+          <a href="#"><img src="https://img.zoronetwork.ru/_r/300x400/100/dc/a5/dca5567829fc96df655f2a426cc17191/dca5567829fc96df655f2a426cc17191.jpg"  /></image></br></a>
+          <a href="#"><img src="https://img.zoronetwork.ru/_r/300x400/100/dc/a5/dca5567829fc96df655f2a426cc17191/dca5567829fc96df655f2a426cc17191.jpg"  /></image></br></a>
+          <a href="#"><img src="https://img.zoronetwork.ru/_r/300x400/100/dc/a5/dca5567829fc96df655f2a426cc17191/dca5567829fc96df655f2a426cc17191.jpg"  /></image></br></a>
+          <a href="#"><img src="https://img.zoronetwork.ru/_r/300x400/100/dc/a5/dca5567829fc96df655f2a426cc17191/dca5567829fc96df655f2a426cc17191.jpg"  /></image></br></a>
+        </ul>
+        </div>
+        -->
+      
+     
+    </div>
+  </section>
+    
+  </div>
+  </body>
+</html>
